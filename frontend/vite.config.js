@@ -1,11 +1,11 @@
 import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import tailwindcss from '@tailwindcss/vite'
+import react from '@vitejs/react-vite-app' // or '@vitejs/plugin-react' depending on your setup
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [
-    react(),
-    tailwindcss(),
-  ],
+  plugins: [react()],
+  server: {
+    allowedHosts: [
+      'netflix-stock-app.onrender.com'
+    ]
+  }
 })
